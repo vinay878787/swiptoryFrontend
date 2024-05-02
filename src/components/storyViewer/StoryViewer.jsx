@@ -23,7 +23,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./StoryViewer.module.css";
 
-const FRONTEND_URL = import.meta.env.VITE_APP_FRONTEND_URL;
+const FRONTEND_URL = "https://swiptory-frontend-hecq.vercel.app";
 
 const StoryViewer = () => {
   const navigate = useNavigate();
