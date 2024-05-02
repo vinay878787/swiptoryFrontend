@@ -24,7 +24,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useParams } from "react-router-dom";
 import styles from "./StatusShare.module.css";
 
-const FRONTEND_URL = import.meta.env.VITE_APP_FRONTEND_URL;
+const FRONTEND_URL = "https://swiptory-frontend-hecq.vercel.app";
 
 const StatusShare = () => {
   const { id } = useParams();
