@@ -133,11 +133,12 @@ function Login() {
           </button>
         </form>
       </Modal>
-      <ToastContainer
+        <ToastContainer
         position="top-center"
         autoClose={2000}
-        hideProgressBar={true}
+        hideProgressBar={false}
         newestOnTop={false}
+        closeOnClick
         rtl={false}
         draggable
         theme="colored"
