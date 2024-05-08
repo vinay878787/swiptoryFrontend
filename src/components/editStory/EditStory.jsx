@@ -137,7 +137,7 @@ const EditStory = () => {
         const response = await updateStoryById(storyId, slides);
 
         if (response.status === 201) {
-          toast.success("Story created successfully!");
+          alert("Story created successfully!");
           setTimeout(() => {
             setCreateStoryVisible(false);
             setIsModalVisible(false);
