@@ -75,16 +75,7 @@ function Register() {
           setLoginModalVisible(false);
           setRegisterModalVisible(true);
 
-          toast.error("Please give unique username. Username already exists", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+          toast.error("Please give unique username. Username already exists");
         } else {
           setLoginModalVisible(false);
           setRegisterModalVisible(true);
@@ -154,7 +145,7 @@ function Register() {
           </button>
         </form>
       </Modal>
-     <ToastContainer/>
+     <ToastContainer  autoClose={2000}/>
     </>
   );
 }
