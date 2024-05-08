@@ -263,7 +263,7 @@ const StoryViewer = () => {
   const handleShareClick = (storyId) => {
     const slideShowLink = `${FRONTEND_URL}/viewStory/${storyId}`;
     navigator.clipboard.writeText(slideShowLink);
-    toast.success("Link copied!");
+    alert("Link copied!");
   };
 
   return storyViewer ? (
