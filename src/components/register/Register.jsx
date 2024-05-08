@@ -65,7 +65,16 @@ function Register() {
             setRegisterModalVisible(false);
             setLoginModalVisible(true);
           }, 1500);
-          toast.success("User registered successfully!");
+          toast.success("User registered successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+    });
         } else if (
           response &&
           response.data &&
@@ -75,12 +84,30 @@ function Register() {
           setLoginModalVisible(false);
           setRegisterModalVisible(true);
 
-          toast.error("Please give unique username. Username already exists");
+          toast.error("Please give unique username. Username already exists", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+    });
         } else {
           setLoginModalVisible(false);
           setRegisterModalVisible(true);
 
-          toast.error("Registration failed! Please try again later");
+          toast.error("Registration failed! Please try again later", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+    });
         }
       }
     } catch (error) {
@@ -145,14 +172,16 @@ function Register() {
           </button>
         </form>
       </Modal>
-      <ToastContainer
-        position="top-center"
+     <ToastContainer
+        position="top-right"
         autoClose={2000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTop
         closeOnClick
         rtl={false}
+        pauseOnFocusLoss
         draggable
+        pauseOnHover={false}
         theme="colored"
       />
     </>
