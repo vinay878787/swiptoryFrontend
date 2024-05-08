@@ -74,7 +74,6 @@ function Register() {
       draggable: true,
       progress: undefined,
       theme: "colored",
-      autoClose: 5000,
     });
         } else if (
           response &&
@@ -94,7 +93,6 @@ function Register() {
       draggable: true,
       progress: undefined,
       theme: "colored",
-      autoClose: 5000,
     });
         } else {
           setLoginModalVisible(false);
@@ -109,7 +107,6 @@ function Register() {
       draggable: true,
       progress: undefined,
       theme: "colored",
-      autoClose: 5000,
     });
         }
       }
@@ -186,7 +183,6 @@ function Register() {
         draggable
         pauseOnHover={false}
         theme="colored"
-        autoClose={2000}
       />
     </>
   );
