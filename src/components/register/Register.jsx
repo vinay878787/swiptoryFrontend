@@ -73,7 +73,8 @@ function Register() {
       pauseOnHover: false,
       draggable: true,
       progress: undefined,
-      theme: "colored"
+      theme: "colored",
+      autoClose: 5000,
     });
         } else if (
           response &&
@@ -92,7 +93,8 @@ function Register() {
       pauseOnHover: false,
       draggable: true,
       progress: undefined,
-      theme: "colored"
+      theme: "colored",
+      autoClose: 5000,
     });
         } else {
           setLoginModalVisible(false);
@@ -106,7 +108,8 @@ function Register() {
       pauseOnHover: false,
       draggable: true,
       progress: undefined,
-      theme: "colored"
+      theme: "colored",
+      autoClose: 5000,
     });
         }
       }
