@@ -53,7 +53,7 @@ function NavBar() {
 
   const handleLogout = () => {
     localStorage.clear();
-    toast.success("User Logout Successful");
+    alert("User Logout Successful");
     setTimeout(() => {
       //window.location.href = "/";
       window.location.reload();
