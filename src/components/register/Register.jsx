@@ -61,11 +61,11 @@ function Register() {
         console.log("RESPONSE", response);
 
         if (response.status === 200) {
-          toast.success("User registered successfully!");
           setTimeout(() => {
             setRegisterModalVisible(false);
             setLoginModalVisible(true);
           }, 1500);
+           toast.success("User registered successfully!");
         } else if (
           response &&
           response.data &&
