@@ -61,7 +61,7 @@ const EditStory = () => {
       data.push({ heading: "", description: "", imageUrl: "", categories: "" });
       setSlides([...data]);
     } else {
-      toast.error("Maximum 6 slides are allowed");
+      alert("Maximum 6 slides are allowed");
     }
     setCurrentSlide(data.length - 1);
   };
@@ -73,7 +73,7 @@ const EditStory = () => {
       setSlides([...newSlides]);
       console.log("current SLIDE", currentSlide);
     } else {
-      toast.error("Minimum 3 slides are allowed");
+      alert("Minimum 3 slides are allowed");
     }
     setCurrentSlide(data.length - 2);
   };
@@ -94,7 +94,7 @@ const EditStory = () => {
       setCurrentSlide((prevSlide) => prevSlide - 1);
       console.log("from prev option", currentSlide);
     } else {
-      toast.error("This is the first slide");
+      alert("This is the first slide");
     }
   };
 
@@ -103,7 +103,7 @@ const EditStory = () => {
       setCurrentSlide((prevSlide) => prevSlide + 1);
       console.log("from next option", currentSlide);
     } else {
-      toast.error("This is the last slide");
+      alert("This is the last slide");
     }
   };
 
@@ -125,13 +125,13 @@ const EditStory = () => {
 
     try {
       if (isAnySlideIncomplete) {
-        toast.error("Please fill out all fields for each slide");
+        alert("Please fill out all fields for each slide");
       } else if (!allSlidesHaveSelectCategory) {
-        toast.error("Please select a category for each slide");
+        alert("Please select a category for each slide");
       } else if (slides.length < 3 || slides.length > 6) {
-        toast.error("Number of slides must be between 3 and 6");
+        alert("Number of slides must be between 3 and 6");
       } else if (!slides.every((slide) => slide.categories === firstCategory)) {
-        toast.error("All slides must have the same category");
+        alert("All slides must have the same category");
       } else {
         console.log("STORY ID BEFORE SENDING TO BACKEND :", storyId);
         const response = await updateStoryById(storyId, slides);
@@ -144,16 +144,16 @@ const EditStory = () => {
             window.location.reload();
           }, 2000);
         } else if (response.status === 401) {
-          toast.error("Unauthorized access");
+          alert("Unauthorized access");
         } else if (response.status === 422) {
-          toast.error("Invalid input provided");
+          alert("Invalid input provided");
         } else if (response.status === 404) {
-          toast.error("Story not found ! Please register your account");
+          alert("Story not found ! Please register your account");
         }
       }
     } catch (error) {
       console.error("Error creating story:", error.message);
-      toast.error("Failed to create story. Please try again.");
+      alert("Failed to create story. Please try again.");
     } finally {
       setIsLoading(false);
     }
