@@ -145,16 +145,14 @@ function Register() {
           </button>
         </form>
       </Modal>
-    <ToastContainer
-        position="top-right"
+      <ToastContainer
+        position="top-center"
         autoClose={2000}
         hideProgressBar={false}
-        newestOnTop
+        newestOnTop={false}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
         draggable
-        pauseOnHover={false}
         theme="colored"
       />
     </div>
