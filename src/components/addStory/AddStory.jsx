@@ -298,7 +298,7 @@ const AddStory = () => {
       <ToastContainer
         position="top-center"
         autoClose={2000}
-        hideProgressBar={true}
+        hideProgressBar={false}
         newestOnTop={false}
         rtl={false}
         draggable
