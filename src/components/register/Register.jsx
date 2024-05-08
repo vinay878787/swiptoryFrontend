@@ -61,26 +61,22 @@ function Register() {
         console.log("RESPONSE", response);
 
         if (response.status === 200) {
+           toast.success("User registered successfully!");
           setTimeout(() => {
             setRegisterModalVisible(false);
             setLoginModalVisible(true);
           }, 1500);
-           toast.success("User registered successfully!");
         } else if (
           response &&
           response.data &&
           response.data.response &&
           response.data.response.status === 409
         ) {
-          setLoginModalVisible(false);
-          setRegisterModalVisible(true);
-
           toast.error("Please give unique username. Username already exists");
-        } else {
-          setLoginModalVisible(false);
-          setRegisterModalVisible(true);
 
+        } else {
           toast.error("Registration failed! Please try again later");
+
         }
       }
     } catch (error) {
