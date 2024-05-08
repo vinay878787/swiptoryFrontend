@@ -65,16 +65,7 @@ function Register() {
             setRegisterModalVisible(false);
             setLoginModalVisible(true);
           }, 1500);
-          toast.success("User registered successfully!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+          toast.success("User registered successfully!");
         } else if (
           response &&
           response.data &&
@@ -98,16 +89,7 @@ function Register() {
           setLoginModalVisible(false);
           setRegisterModalVisible(true);
 
-          toast.error("Registration failed! Please try again later", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+          toast.error("Registration failed! Please try again later");
         }
       }
     } catch (error) {
@@ -172,18 +154,7 @@ function Register() {
           </button>
         </form>
       </Modal>
-     <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={true}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="colored"
-      />
+     <ToastContainer/>
     </>
   );
 }
