@@ -50,7 +50,7 @@ function Login() {
             setLoginModalVisible(false);
             navigate("/");
           }, 1200);
-          toast.success("User login successful!");
+          alert("User login successful!");
           setUserData({
             userName: localStorage.getItem("userName"),
             token: localStorage.getItem("token"),
@@ -66,14 +66,14 @@ function Login() {
           response.data.response &&
           response.data.response.status === 404
         ) {
-          toast.error("User not found");
+          alert("User not found");
         } else if (
           response &&
           response.data &&
           response.data.response &&
           response.data.response.status === 401
         ) {
-          toast.error("Invalid Credentials!");
+          alert("Invalid Credentials!");
         }
       }
     } catch (error) {
@@ -82,7 +82,7 @@ function Login() {
         password: "",
       });
       console.log("Error from login:", error);
-      toast.error("An error occurred. Please try again.");
+      alert("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
     }
