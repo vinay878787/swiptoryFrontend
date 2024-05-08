@@ -61,7 +61,9 @@ function Register() {
         console.log("RESPONSE", response);
 
         if (response.status === 200) {
-           toast.success("User registered successfully!");
+           toast.success('User registered successfully!', {
+        autoClose: 2000,
+      });
           setTimeout(() => {
             setRegisterModalVisible(false);
             setLoginModalVisible(true);
