@@ -155,7 +155,6 @@ function Register() {
         draggable
         theme="colored"
       />
-    </div>
     </>
   );
 }
