@@ -35,7 +35,7 @@ const AddStory = () => {
       data.push({ heading: "", description: "", imageUrl: "", categories: "" });
       setSlides([...data]);
     } else {
-      toast.error("Maximum 6 slides are allowed");
+      alert("maximum 6 slides are allowed")
     }
     setCurrentSlide(data.length - 1);
   };
@@ -47,7 +47,8 @@ const AddStory = () => {
       setSlides([...newSlides]);
       console.log("current SLIDE", currentSlide);
     } else {
-      toast.error("Minimum 3 slides are allowed");
+      //toast.error("Minimum 3 slides are allowed");
+      alert("minimum 3 slides are allowed")
     }
     setCurrentSlide(data.length - 2);
   };
@@ -68,7 +69,7 @@ const AddStory = () => {
       setCurrentSlide((prevSlide) => prevSlide - 1);
       console.log("from prev option", currentSlide);
     } else {
-      toast.error("This is the first slide");
+      alert("This is the first slide");
     }
   };
 
@@ -77,7 +78,7 @@ const AddStory = () => {
       setCurrentSlide((prevSlide) => prevSlide + 1);
       console.log("from next option", currentSlide);
     } else {
-      toast.error("This is the last slide");
+      alert("This is the last slide");
     }
   };
 
@@ -111,7 +112,7 @@ const AddStory = () => {
         const response = await addStory(slides);
 
         if (response.status === 201) {
-          toast.success("Story created successfully!");
+          alert("Story created successfully!");
           setTimeout(() => {
             setCreateStoryVisibility(false);
             setIsModalVisible(false);
@@ -123,19 +124,19 @@ const AddStory = () => {
           response.data.response &&
           response.data.response.status === 401
         ) {
-          toast.error("Unauthorized access");
+          alert("Unauthorized access");
         } else if (
           response &&
           response.data &&
           response.data.response &&
           response.data.response.status === 422
         ) {
-          toast.error("Invalid input provided");
+          alert("Invalid input provided");
         }
       }
     } catch (error) {
       console.error("Error creating story:", error.message);
-      toast.error("Failed to create story. Please try again.");
+      alert("Failed to create story. Please try again.");
     } finally {
       setIsLoading(false);
     }
