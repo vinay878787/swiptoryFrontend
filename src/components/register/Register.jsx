@@ -150,7 +150,6 @@ function Register() {
         autoClose={2000}
         hideProgressBar={true}
         newestOnTop={false}
-        closeOnClick
         rtl={false}
         draggable
         theme="colored"
