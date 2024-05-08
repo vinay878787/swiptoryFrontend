@@ -175,7 +175,7 @@ function Register() {
      <ToastContainer
         position="top-right"
         autoClose={2000}
-        hideProgressBar={false}
+        hideProgressBar={true}
         newestOnTop
         closeOnClick
         rtl={false}
@@ -183,6 +183,7 @@ function Register() {
         draggable
         pauseOnHover={false}
         theme="colored"
+        autoClose={2000}
       />
     </>
   );
