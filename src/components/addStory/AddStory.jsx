@@ -101,13 +101,13 @@ const AddStory = () => {
 
     try {
       if (isAnySlideIncomplete) {
-        toast.error("Please fill out all fields for each slide");
+        alert("Please fill out all fields for each slide");
       } else if (!allSlidesHaveSelectCategory) {
-        toast.error("Please select a category for each slide");
+        alert("Please select a category for each slide");
       } else if (slides.length < 3 || slides.length > 6) {
-        toast.error("Number of slides must be between 3 and 6");
+        alert("Number of slides must be between 3 and 6");
       } else if (!slides.every((slide) => slide.categories === firstCategory)) {
-        toast.error("All slides must have the same category");
+        alert("All slides must have the same category");
       } else {
         const response = await addStory(slides);
 
